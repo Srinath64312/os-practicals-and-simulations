@@ -16,6 +16,9 @@ Operating Systems and Systems Programming (OSSP) — 25CS2104E Laboratory, Skill
 - **`prog6_fifo_client.c`** — **Practical 6 (Part 1 - Client):** Client that creates a dedicated return FIFO and communicates with the FIFO server.
 - **`signal_handler.c`** — **Practical 6 (Part 2):** Asynchronous Event Handling using POSIX `sigaction()` capturing `SIGINT`, `SIGTERM`, and `SIGUSR1`.
 - **`page_replacement.c`** — **Memory Management:** Page Replacement Algorithms Simulator (FIFO, Optimal, LRU, and MRU) with frame visualizations, page hit/fault tracking, and benchmark comparisons.
+- **`prog7_linuxaddr.c`** — **Practical 7:** Understanding Linux Process Address Space (Code, Data, Static, BSS, Heap, and Stack segments) and `/proc/<PID>/maps` inspection.
+- **`dynamic_memory.c`** — **Practical 8 (Part 1):** Dynamic Memory Allocation using `malloc()`, `calloc()`, `realloc()`, and `free()` with Valgrind memory leak verification.
+- **`cow_demo.c`** — **Practical 8 (Part 2):** Copy-on-Write (COW) Memory Demonstration after `fork()` with per-page modification analysis.
 
 ### 🛠️ Skilling Sessions (Restricted Shell Project)
 - **`skilling1.c`** — **Skilling Session 1:** Shell REPL architecture and interactive input loop.
@@ -32,6 +35,11 @@ Operating Systems and Systems Programming (OSSP) — 25CS2104E Laboratory, Skill
 To compile all practicals and skilling programs at once using `gcc` with `-Wall -Wextra -g`:
 ```bash
 make
+```
+
+To run Valgrind leak checking on dynamic memory:
+```bash
+make check_leaks
 ```
 
 To clean compiled binaries and temporary test artifacts:
@@ -91,7 +99,36 @@ Supports:
 2. Built-in Handout Example 2 (Optimal, LRU, MRU comparisons with 4 frames)
 3. Custom page reference string and frame capacity input
 
-### 5. Skilling Sessions (Restricted Shell)
+### 5. Practical 7 (Linux Process Address Space)
+```bash
+./prog7_linuxaddr
+```
+In another terminal, inspect the active virtual mappings using the PID outputted:
+```bash
+cat /proc/<PID>/maps
+pmap <PID>
+grep -E "VmSize|VmRSS|VmData|VmStk|VmExe" /proc/<PID>/status
+```
+
+### 6. Practical 8 (Dynamic Memory & Valgrind)
+**Run program:**
+```bash
+./dynamic_memory
+```
+**Run Valgrind Leak Check:**
+```bash
+valgrind --leak-check=full --show-leak-kinds=all ./dynamic_memory
+# or simply:
+make check_leaks
+```
+
+### 7. Practical 8 (Copy-on-Write Demonstration)
+```bash
+./cow_demo
+```
+Observes shared physical pages before and after child modifies 1 byte in each 4 KB page.
+
+### 8. Skilling Sessions (Restricted Shell)
 ```bash
 ./skilling1
 ./skilling2

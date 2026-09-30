@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g
 
-PRACTICALS = prog1 prog2 prog3 prog4 prog5 prog6_fifo_server prog6_fifo_client signal_handler page_replacement
+PRACTICALS = prog1 prog2 prog3 prog4 prog5 prog6_fifo_server prog6_fifo_client signal_handler page_replacement prog7_linuxaddr dynamic_memory cow_demo
 SKILLINGS = skilling1 skilling2 skilling3 skilling4 skilling5 skilling6
 
 all: $(PRACTICALS) $(SKILLINGS)
@@ -32,6 +32,18 @@ signal_handler: signal_handler.c
 
 page_replacement: page_replacement.c
 	$(CC) $(CFLAGS) page_replacement.c -o page_replacement
+
+prog7_linuxaddr: prog7_linuxaddr.c
+	$(CC) $(CFLAGS) prog7_linuxaddr.c -o prog7_linuxaddr
+
+dynamic_memory: dynamic_memory.c
+	$(CC) $(CFLAGS) dynamic_memory.c -o dynamic_memory
+
+cow_demo: cow_demo.c
+	$(CC) $(CFLAGS) cow_demo.c -o cow_demo
+
+check_leaks: dynamic_memory
+	valgrind --leak-check=full --show-leak-kinds=all ./dynamic_memory
 
 skilling1: skilling1.c
 	$(CC) $(CFLAGS) skilling1.c -o skilling1

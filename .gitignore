@@ -7,6 +7,9 @@ prog6_fifo_server
 prog6_fifo_client
 signal_handler
 page_replacement
+prog7_linuxaddr
+dynamic_memory
+cow_demo
 skilling1
 skilling2
 skilling3
