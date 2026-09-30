@@ -27,6 +27,7 @@ Operating Systems and Systems Programming (OSSP) — 25CS2104E Laboratory, Skill
 - **`skilling4.c`** — **Skilling Session 4:** Shell built-in commands (`cd`, `pwd`, `env`) executed directly in the parent process.
 - **`skilling5.c`** — **Skilling Session 5:** POSIX signal handling (`SIGINT` Ctrl+C interception and `SIGCHLD` zombie reaper).
 - **`skilling6.c`** — **Skilling Session 6:** Complete integrated Restricted Shell with security sanitization and audit logging.
+- **`skilling7.c`** — **Skilling Session 7:** Shell Pipeline Architecture using `pipe()` and `dup2()` for two-stage command pipelines.
 
 ---
 
@@ -136,4 +137,5 @@ Observes shared physical pages before and after child modifies 1 byte in each 4 
 ./skilling4
 ./skilling5
 ./skilling6
+./skilling7
 ```

@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 
 PRACTICALS = prog1 prog2 prog3 prog4 prog5 prog6_fifo_server prog6_fifo_client signal_handler page_replacement prog7_linuxaddr dynamic_memory cow_demo
-SKILLINGS = skilling1 skilling2 skilling3 skilling4 skilling5 skilling6
+SKILLINGS = skilling1 skilling2 skilling3 skilling4 skilling5 skilling6 skilling7
 
 all: $(PRACTICALS) $(SKILLINGS)
 
@@ -62,6 +62,9 @@ skilling5: skilling5.c
 
 skilling6: skilling6.c
 	$(CC) $(CFLAGS) skilling6.c -o skilling6
+
+skilling7: skilling7.c
+	$(CC) $(CFLAGS) skilling7.c -o skilling7
 
 clean:
 	rm -f $(PRACTICALS) $(SKILLINGS) a.out access.log output.txt sample_source.txt sample_destination.txt /tmp/server_fifo /tmp/client_*_fifo
