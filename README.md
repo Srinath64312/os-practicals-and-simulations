@@ -1,16 +1,25 @@
 # OS Practicals & Skilling Sessions
 
+[![Live Web Terminal](https://img.shields.io/badge/Live_Web_Terminal-Online-brightgreen.svg?style=for-the-badge&logo=gnu-bash)](https://Srinath64312.github.io/os-practicals-and-simulations/)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Srinath64312/os-practicals-and-simulations)
 [![Build Status](https://img.shields.io/badge/GCC-15.2.0-blue.svg)](https://gcc.gnu.org/)
 [![Valgrind](https://img.shields.io/badge/Valgrind-3.26-green.svg)](https://valgrind.org/)
+
+### 🌐 Live Online Terminal: [https://Srinath64312.github.io/os-practicals-and-simulations/](https://Srinath64312.github.io/os-practicals-and-simulations/)
 
 Operating Systems and Systems Programming (OSSP) — 25CS2104E Laboratory, Skilling Sessions, and Practical Simulations Repository.
 
 ---
 
-## 🚀 Run Live Inside GitHub (Interactive Cloud Terminal)
+## 🚀 Run Live Online in Your Browser (No Setup Needed!)
 
-You can compile, run, and debug all practicals in an interactive Linux terminal **directly inside GitHub** in your browser without installing anything locally:
+### Option 1: Live Web Terminal (Instant In-Browser Website)
+👉 **Visit the Live Terminal Website: [https://Srinath64312.github.io/os-practicals-and-simulations/](https://Srinath64312.github.io/os-practicals-and-simulations/)**
+- Runs completely inside your browser on GitHub Pages.
+- Execute page replacement algorithms (FIFO, LRU, Optimal, MRU), dynamic memory, COW 100MB, low-level copy benchmarks, and POSIX multithreading with 1 click!
+- Features interactive C source code inspection, real-time audit logs, and CRT retro scanline styling.
+
+---
 
 👉 **[Open in GitHub Codespaces](https://codespaces.new/Srinath64312/os-practicals-and-simulations)**
 
