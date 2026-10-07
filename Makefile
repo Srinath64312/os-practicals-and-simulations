@@ -1,8 +1,9 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g
+PTHREAD_FLAG = -pthread
 
-PRACTICALS = prog1 prog2 prog3 prog4 prog5 prog6_fifo_server prog6_fifo_client signal_handler page_replacement prog7_linuxaddr dynamic_memory cow_demo
-SKILLINGS = skilling1 skilling2 skilling3 skilling4 skilling5 skilling6 skilling7
+PRACTICALS = prog1 prog2 prog3 prog4 prog5 prog6_fifo_server prog6_fifo_client signal_handler page_replacement prog7_linuxaddr dynamic_memory cow_demo copy_lowlevel copy_stdio redirect_output redirect_input
+SKILLINGS = skilling1 skilling2 skilling3 skilling4 skilling5 skilling6 skilling7 skilling8 skilling10
 
 all: $(PRACTICALS) $(SKILLINGS)
 
@@ -42,6 +43,18 @@ dynamic_memory: dynamic_memory.c
 cow_demo: cow_demo.c
 	$(CC) $(CFLAGS) cow_demo.c -o cow_demo
 
+copy_lowlevel: copy_lowlevel.c
+	$(CC) $(CFLAGS) copy_lowlevel.c -o copy_lowlevel
+
+copy_stdio: copy_stdio.c
+	$(CC) $(CFLAGS) copy_stdio.c -o copy_stdio
+
+redirect_output: redirect_output.c
+	$(CC) $(CFLAGS) redirect_output.c -o redirect_output
+
+redirect_input: redirect_input.c
+	$(CC) $(CFLAGS) redirect_input.c -o redirect_input
+
 check_leaks: dynamic_memory
 	valgrind --leak-check=full --show-leak-kinds=all ./dynamic_memory
 
@@ -65,6 +78,12 @@ skilling6: skilling6.c
 
 skilling7: skilling7.c
 	$(CC) $(CFLAGS) skilling7.c -o skilling7
+
+skilling8: skilling8.c
+	$(CC) $(CFLAGS) skilling8.c -o skilling8
+
+skilling10: skilling10.c
+	$(CC) $(CFLAGS) $(PTHREAD_FLAG) skilling10.c -o skilling10
 
 clean:
 	rm -f $(PRACTICALS) $(SKILLINGS) a.out access.log output.txt sample_source.txt sample_destination.txt /tmp/server_fifo /tmp/client_*_fifo

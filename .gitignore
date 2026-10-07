@@ -10,6 +10,10 @@ page_replacement
 prog7_linuxaddr
 dynamic_memory
 cow_demo
+copy_lowlevel
+copy_stdio
+redirect_output
+redirect_input
 skilling1
 skilling2
 skilling3
@@ -17,6 +21,8 @@ skilling4
 skilling5
 skilling6
 skilling7
+skilling8
+skilling10
 a.out
 *.o
 *.exe

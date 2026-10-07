@@ -19,6 +19,10 @@ Operating Systems and Systems Programming (OSSP) — 25CS2104E Laboratory, Skill
 - **`prog7_linuxaddr.c`** — **Practical 7:** Understanding Linux Process Address Space (Code, Data, Static, BSS, Heap, and Stack segments) and `/proc/<PID>/maps` inspection.
 - **`dynamic_memory.c`** — **Practical 8 (Part 1):** Dynamic Memory Allocation using `malloc()`, `calloc()`, `realloc()`, and `free()` with Valgrind memory leak verification.
 - **`cow_demo.c`** — **Practical 8 (Part 2):** Copy-on-Write (COW) Memory Demonstration after `fork()` with per-page modification analysis.
+- **`copy_lowlevel.c`** — **Practical 9 (Part 1):** Low-Level File Copy using POSIX system calls (`open`, `read`, `write`, `lseek`).
+- **`copy_stdio.c`** — **Practical 9 (Part 2):** Standard C Library File Copy using buffered I/O streams (`fopen`, `fread`, `fwrite`, `fseek`, `ftell`).
+- **`redirect_output.c`** — **Practical 9 (Part 3):** Standard Output Redirection to file using `dup2(fd, STDOUT_FILENO)`.
+- **`redirect_input.c`** — **Practical 9 (Part 4):** Standard Input Redirection from file using `dup2(fd, STDIN_FILENO)`.
 
 ### 🛠️ Skilling Sessions (Restricted Shell Project)
 - **`skilling1.c`** — **Skilling Session 1:** Shell REPL architecture and interactive input loop.
@@ -28,6 +32,8 @@ Operating Systems and Systems Programming (OSSP) — 25CS2104E Laboratory, Skill
 - **`skilling5.c`** — **Skilling Session 5:** POSIX signal handling (`SIGINT` Ctrl+C interception and `SIGCHLD` zombie reaper).
 - **`skilling6.c`** — **Skilling Session 6:** Complete integrated Restricted Shell with security sanitization and audit logging.
 - **`skilling7.c`** — **Skilling Session 7:** Shell Pipeline Architecture using `pipe()` and `dup2()` for two-stage command pipelines.
+- **`skilling8.c`** — **Skilling Session 8:** Defensive Memory Management and leak-free lifecycle for Valgrind verification.
+- **`skilling10.c`** — **Skilling Session 10:** Multithreading & Concurrency using POSIX Threads (`pthread`) and Mutex synchronization.
 
 ---
 
