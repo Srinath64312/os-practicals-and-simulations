@@ -1,6 +1,28 @@
 # OS Practicals & Skilling Sessions
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Srinath64312/os-practicals-and-simulations)
+[![Build Status](https://img.shields.io/badge/GCC-15.2.0-blue.svg)](https://gcc.gnu.org/)
+[![Valgrind](https://img.shields.io/badge/Valgrind-3.26-green.svg)](https://valgrind.org/)
+
 Operating Systems and Systems Programming (OSSP) — 25CS2104E Laboratory, Skilling Sessions, and Practical Simulations Repository.
+
+---
+
+## 🚀 Run Live Inside GitHub (Interactive Cloud Terminal)
+
+You can compile, run, and debug all practicals in an interactive Linux terminal **directly inside GitHub** in your browser without installing anything locally:
+
+👉 **[Open in GitHub Codespaces](https://codespaces.new/Srinath64312/os-practicals-and-simulations)**
+
+1. Boots a ready-to-code Ubuntu 24.04 Linux container.
+2. Auto-installs GCC, Make, GDB, Valgrind and runs `make all`.
+3. Run any practical directly:
+   ```bash
+   ./page_replacement
+   ./dynamic_memory
+   ./copy_lowlevel Makefile test_out.txt
+   ./skilling10
+   ```
 
 ---
 
